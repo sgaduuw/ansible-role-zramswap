@@ -1,7 +1,5 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include ansible-role-zramswap"
-      include_role:
-        name: "ansible-role-zramswap"
+  roles:
+    - role: sgaduuw.zramswap
