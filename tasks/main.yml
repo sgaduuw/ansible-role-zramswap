@@ -1,2 +1,6 @@
 ---
-# tasks file for ansible-role-zramswap
+- name: run distro tasks
+  include_tasks: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - unsupported.yml
