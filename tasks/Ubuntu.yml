@@ -1,9 +1,11 @@
 ---
 # Ubuntu tasks file for sgaduuw.zramswap
 - name: install package zram-config
-  package:
+  apt:
     name: zram-config
     state: present
+    update_cache: yes
+    install_recommends: no
 
 - name: enable service for zram-config
   service:

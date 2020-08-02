@@ -1,9 +1,11 @@
 ---
 # Debian tasks file for sgaduuw.zramswap
 - name: install package zram-tools
-  package:
+  apt:
     name: zram-tools
     state: present
+    update_cache: yes
+    install_recommends: no
 
 - name: enable service for zram-tools
   service:
