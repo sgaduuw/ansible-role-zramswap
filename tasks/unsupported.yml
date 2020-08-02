@@ -1,0 +1,4 @@
+---
+- name: bail out
+  fail:
+    msg: "Sorry, {{ ansible_distribution }} is not supported just yet."
