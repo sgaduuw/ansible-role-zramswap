@@ -12,7 +12,8 @@ galaxy_info:
         - all
     - name: Debian
       versions:
-        - 10
+        - buster
+        - stretch
     - name: Ubuntu
       versions:
         - focal
