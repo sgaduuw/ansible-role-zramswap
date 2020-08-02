@@ -1,0 +1,12 @@
+---
+# Debian tasks file for sgaduuw.zramswap
+- name: install package zram-tools
+  package:
+    name: zram-tools
+    state: present
+
+- name: enable service for zram-tools
+  service:
+    name: zramswap
+    enabled: yes
+    state: started
