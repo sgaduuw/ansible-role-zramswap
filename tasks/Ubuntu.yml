@@ -1,0 +1,12 @@
+---
+# Ubuntu tasks file for sgaduuw.zramswap
+- name: install package zram-config
+  package:
+    name: zram-config
+    state: present
+
+- name: enable service for zram-config
+  service:
+    name: zram-config
+    enabled: yes
+    state: started
