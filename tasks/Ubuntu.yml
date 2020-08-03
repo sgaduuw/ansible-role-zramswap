@@ -13,4 +13,4 @@
     enabled: yes
     state: started
   tags:
-    - molecule-idempotence-notest
+    - molecule-notest
