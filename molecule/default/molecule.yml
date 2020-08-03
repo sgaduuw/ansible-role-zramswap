@@ -8,6 +8,36 @@ lint: |
   yamllint .
   ansible-lint
 platforms:
+  - name: ubuntu2004
+    image: jrei/systemd-ubuntu
+    image_version: 20.04
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: true
+    privileged: True
+  - name: ubuntu1804
+    image: jrei/systemd-ubuntu
+    image_version: 18.04
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: true
+    privileged: True
+  - name: ubuntu1604
+    image: jrei/systemd-ubuntu
+    image_version: 16.04
+    tmpfs:
+      - /run
+      - /tmp
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: true
+    privileged: True
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos8}-ansible:latest"
     command: /sbin/init
