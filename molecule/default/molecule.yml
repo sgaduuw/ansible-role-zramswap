@@ -10,7 +10,10 @@ lint: |
 platforms:
   - name: instance
     image: "geerlingguy/docker-${MOLECULE_DISTRO:-centos8}-ansible:latest"
-    command: ${MOLECULE_DOCKER_COMMAND:-""}
+    command: /sbin/init
+    tmpfs:
+      - /run
+      - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
