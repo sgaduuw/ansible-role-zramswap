@@ -3,7 +3,7 @@
     name: systemd-swap
     state: present
 
-- name: create directory: /etc/systemd/swap.conf.d
+- name: create directory /etc/systemd/swap.conf.d
   file:
     path: /etc/systemd/swap.conf.d
     state: directory
