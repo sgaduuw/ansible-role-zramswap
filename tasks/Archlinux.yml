@@ -16,12 +16,14 @@
     path: /etc/systemd/swap.conf.d/ansible-zramswap.conf
     create: yes
     line: zswap_enabled=0
+    mode: 0644
 
 - name: configure systemd-swap - enable zram
   lineinfile:
     path: /etc/systemd/swap.conf.d/ansible-zramswap.conf
     create: yes
     line: zram_enabled=1
+    mode: 0644
 
 - name: enable service for systemd-swap
   service:
